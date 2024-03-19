@@ -85,7 +85,7 @@ const Footer = () => {
             onClick={() => scrollToTopUtil()}
             className="ml-1 hover:underline"
           >
-            Saurabh Khatmode
+            Vivek
           </ScrollLink>
           . All Rights Reserved.
         </span>
