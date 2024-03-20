@@ -21,10 +21,10 @@ const Skills = () => {
     TailwindCSSLogo,
     NodeJSLogo,
     MongoDBLogo,
-    GithubLogo,
     ExpressJSLogo,
-    FastAPILogo,
-    PostgreSQLLogo,
+    GithubLogo,
+    // FastAPILogo,
+    // PostgreSQLLogo,
     DockerLogo,
   ];
 
