@@ -66,7 +66,9 @@ const Project = () => {
           ))}
         </div>
       </motion.div>
-      <div
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <h1 className=" text-gray-800 font-bebas-neue text-4xl dark:text-white pb-6 ">Coming soon</h1>
+      {/* <div
         className={`${
           projects.length > 2
             ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3"
@@ -85,7 +87,7 @@ const Project = () => {
             clientDemoLink={project.clientDemoLink}
           />
         ))}
-      </div>
+      </div> */}
     </motion.div>
   );
 };

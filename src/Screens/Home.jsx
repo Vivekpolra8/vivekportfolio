@@ -37,7 +37,7 @@ const Hero = () => {
             variants={textVariants}
           >
             <h1 className="flex flex-col text-6xl font-black leading-none text-gray-800 uppercase font-bebas-neue md:text-9xl dark:text-white">
-            <span className="text-fadeMainTheme"> Vivek </span>
+            <span className="text-fadeMainTheme">  </span>
               <span className="text-fadeMainTheme"> Coding </span>
               Dreams into Reality
             </h1>

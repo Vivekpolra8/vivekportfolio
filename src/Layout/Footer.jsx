@@ -23,33 +23,33 @@ const SocialIcons = () => {
       variants={iconVariants}
     >
       <motion.a
-        href="https://www.linkedin.com/in/saurabhkhatmode/"
+        href="https://www.linkedin.com/in/vivek-patel-4a9757167/"
         target="_blank"
         rel="noopener noreferrer"
       >
         <FaLinkedin className="text-4xl text-blue-600" />
       </motion.a>
       <motion.a
-        href="https://github.com/Saurabh-8585"
+        href="https://github.com/Vivekpolra8"
         target="_blank"
         rel="noopener noreferrer"
       >
         <FaGithub className="text-4xl text-gray-800 dark:text-white" />
       </motion.a>
       <motion.a
-        href="https://www.instagram.com/saurabh7xd/"
+        href="https://www.instagram.com/vivekkpolra/"
         target="_blank"
         rel="noopener noreferrer"
       >
         <FaInstagram className="text-4xl text-pink-500" />
       </motion.a>
-      <motion.a
-        href="https://twitter.com/Saurabhkhatmode"
+      {/* <motion.a
+        href="https://www.instagram.com/vivekkpolra/"
         target="_blank"
         rel="noopener noreferrer"
       >
         <FaTwitter className="text-4xl text-blue-400" />
-      </motion.a>
+      </motion.a> */}
     </motion.div>
   );
 };

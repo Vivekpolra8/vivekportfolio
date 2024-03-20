@@ -38,9 +38,9 @@ export const MainLogo =
     onClick={() => window.scroll(0, 0)}
     className="nav-logo font-black leading-none text-gray-800 font-bebas-neue   dark:text-lightText flex items-center ml-4 cursor-pointer  no-underline text-4xl "
   >
-    Sau
-    <span className="r font-bebas-neue text-mainTheme text-6xl font-bold ">र</span>
-    bh
+    Vi
+    <span className="r font-bebas-neue text-mainTheme text-6xl font-bold ">वे</span>
+    k
   </Link>
 
 // All  Projects Images
