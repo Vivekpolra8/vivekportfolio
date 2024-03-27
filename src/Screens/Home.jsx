@@ -18,11 +18,20 @@ const Hero = () => {
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-
   const downLoadCV = () => {
-    const cvLink = process.env.REACT_APP_RESUME_LINK;
-    window.open(cvLink, "_blank");
+    const link = document.createElement('a');
+    link.href = 'https://drive.google.com/uc?export=download&id=1MKX5s-JY915dpmAhAqoOx3U7BKGLlWU0';
+    link.setAttribute('download', 'VivekCV.pdf');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
+
+  // const downLoadCV = () => {
+  //   // const cvLink = process.env.REACT_APP_RESUME_LINK;
+  //   // window.open(cvLink, "_blank");
+  //   window.open('https://drive.google.com/file/d/11TA_NhqRGPdw4wpxdYvlyg-pPjo9XY3j/view?usp=sharing', '_blank');
+  // };
   return (
     <main className="relative my-10 overflow-hidden pt-24 " id="home">
       <motion.div
@@ -49,6 +58,7 @@ const Hero = () => {
                 btnText="Download CV"
                 btnIcon={<HiOutlineDownload className="text-2xl" />}
                 handleOnClick={downLoadCV}
+                // handleOnClick="window.location.href='https://drive.google.com/file/d/1MKX5s-JY915dpmAhAqoOx3U7BKGLlWU0/view'"
               />
             </motion.div>
           </motion.div>
