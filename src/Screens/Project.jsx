@@ -67,7 +67,7 @@ const Project = () => {
         </div>
       </motion.div>
       &nbsp;&nbsp;&nbsp;&nbsp;
-      <h1 className=" text-gray-800 font-bebas-neue text-4xl dark:text-white pb-6 ">Coming soon</h1>
+      <h1 className="text-orange-500 font-bebas-neue text-2xl dark:text-white pb-6 animate-blink">Loading ...</h1>
       {/* <div
         className={`${
           projects.length > 2
