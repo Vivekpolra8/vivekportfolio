@@ -29,6 +29,9 @@ import Github from '../Assets/Skills/Github.svg'
 import FastAPI from '../Assets/Skills/FastAPI.svg'
 import ExpressJS from '../Assets/Skills/ExpressJS.svg'
 import Docker from '../Assets/Skills/docker.svg'
+import { FaHammer } from "react-icons/fa";
+import { IoHammerOutline } from "react-icons/io5";
+
 
 // Main  Logo
 
@@ -38,6 +41,12 @@ export const MainLogo =
     onClick={() => window.scroll(0, 0)}
     className="nav-logo font-black leading-none text-gray-800 font-bebas-neue   dark:text-lightText flex items-center ml-4 cursor-pointer  no-underline text-4xl "
   >
+    
+    <span className="r font-bebas-neue text-mainTheme text-4xl font-bold ">&lt;</span>
+    <span className="r font-bebas-neue text-mainTheme text-4xl font-bold "><IoHammerOutline size={32}/></span>
+    <span className="r font-bebas-neue text-mainTheme text-4xl font-bold ">/&gt;</span>
+
+    
     Vi
     <span className="r font-bebas-neue text-mainTheme text-6xl font-bold ">वे</span>
     k
