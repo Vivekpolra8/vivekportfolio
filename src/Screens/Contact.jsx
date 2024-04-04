@@ -2,7 +2,8 @@ import { ContactAnimation } from "../Assets/AssetsList";
 import ContactForm from "../Components/ContactForm";
 import LottieAnimationCard from "../Components/LottieAnimationCard";
 import Title from "../Components/Title";
-;
+import { FaSquarePhone } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 
 const Contact = () => {
   return (
@@ -15,11 +16,23 @@ const Contact = () => {
         <LottieAnimationCard AnimationSrc={ContactAnimation} />
         <ContactForm />
       </div>
-      
+      <div className="flex items-center space-x-4">
+        <div className="flex-shrink-0">
+          <MdEmail className="h-6 w-6 text-orange-500" />
+        </div>
+        <a href="mailto:vivekpatel2611@gmail.com" className="text-black text-xl dark:text-white">
+          vivekpatel2611@gmail.com
+        </a>
+      </div>
+      &nbsp;
+      <div className="flex items-center space-x-4">
+        <div className="flex-shrink-0">
+          <FaSquarePhone className="h-6 w-6 text-orange-500" />
+        </div>
+        <p className="text-black text-xl dark:text-white">+91 8000 96 63 96</p>
+      </div>
     </section>
   );
 };
 
 export default Contact;
-
-
