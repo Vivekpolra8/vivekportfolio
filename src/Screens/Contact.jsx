@@ -20,7 +20,10 @@ const Contact = () => {
         <div className="flex-shrink-0">
           <MdEmail className="h-6 w-6 text-orange-500" />
         </div>
-        <a href="mailto:vivekpatel2611@gmail.com" className="text-black text-xl dark:text-white">
+        <a
+          href="mailto:vivekpatel2611@gmail.com"
+          className="text-black text-xl dark:text-white"
+        >
           vivekpatel2611@gmail.com
         </a>
       </div>
@@ -29,7 +32,11 @@ const Contact = () => {
         <div className="flex-shrink-0">
           <FaSquarePhone className="h-6 w-6 text-orange-500" />
         </div>
-        <p className="text-black text-xl dark:text-white">+91 8000 96 63 96</p>
+        {/* <p className="text-black text-xl dark:text-white">+91 8000 96 63 96</p> */}
+        <p className="text-black text-xl dark:text-white">
+          +91 8000 <span class="text-orange-500">96</span> 63
+          <span class="text-orange-500"> 96</span>
+        </p>
       </div>
     </section>
   );
