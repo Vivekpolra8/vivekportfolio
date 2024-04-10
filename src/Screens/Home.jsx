@@ -19,9 +19,10 @@ const Hero = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const downLoadCV = () => {
-    const link = document.createElement('a');
-    link.href = 'https://drive.google.com/uc?export=download&id=1MKX5s-JY915dpmAhAqoOx3U7BKGLlWU0';
-    link.setAttribute('download', 'VivekCV.pdf');
+    const link = document.createElement("a");
+    link.href =
+      "https://drive.google.com/uc?export=download&id=1MKX5s-JY915dpmAhAqoOx3U7BKGLlWU0";
+    link.setAttribute("download", "VivekCV.pdf");
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -46,12 +47,24 @@ const Hero = () => {
             variants={textVariants}
           >
             <h1 className="flex flex-col text-6xl font-black leading-none text-gray-800 uppercase font-bebas-neue md:text-9xl dark:text-white">
-            <span className="text-fadeMainTheme">  </span>
+              <span className="text-fadeMainTheme"> </span>
               <span className="text-fadeMainTheme"> Coding </span>
               Dreams into Reality
             </h1>
             <p className="text-gray-700 dark:text-white text-4xl md:px-3 mt-2">
               Building Tomorrow's Digital World Today
+            </p>
+            <p className="text-gray-700 dark:text-white text-xl md:px-3 mt-2">
+              <span className="text-fadeMainTheme"> Hello!, </span>I am a
+              skilled React.js Developer with expertise in crafting dynamic and
+              responsive web applications. I am currently working on freelance
+              projects, and I enjoy creating elegant solutions for complex
+              frontend challenges, ensuring that the React applications I build
+              are top-notch, performant, and scalable. I am committed to
+              innovation and continuous learning, which drives me to stay
+              up-to-date with industry best practices. I would love to connect
+              with you and explore opportunities to collaborate in the exciting
+              world of React.js development!
             </p>
             <motion.div variants={buttonVariants} className="flex mt-8 md:px-3">
               <Button
