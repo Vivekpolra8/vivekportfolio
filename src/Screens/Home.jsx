@@ -4,6 +4,7 @@ import LottieAnimationCard from "../Components/LottieAnimationCard";
 import { HeroAnimation } from "../Assets/AssetsList";
 import { HiOutlineDownload } from "react-icons/hi";
 import { useRef } from "react";
+import VivekImg from "./../Assets/profile-pic (4).png"
 
 const Hero = () => {
   const textVariants = {
@@ -79,7 +80,14 @@ const Hero = () => {
             className="relative flex lg:justify-end justify-center items-center my-2  md:mt-0 pb-4"
             variants={textVariants}
           >
-            <LottieAnimationCard AnimationSrc={HeroAnimation} />
+            {/* <LottieAnimationCard AnimationSrc={HeroAnimation} /> */}
+            <motion.img
+              src={VivekImg}
+              // alt={title}
+              className="w-full h-full object-cover"
+              initial={{ scale: 1 }}
+              whileHover={{ scale: 1.05 }}
+            />
           </motion.div>
         </div>
       </motion.div>

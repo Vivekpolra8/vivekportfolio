@@ -5,9 +5,13 @@ import { BiMailSend } from "react-icons/bi";
 import Circles from "./Circles";
 import emailjs from "@emailjs/browser";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
-
+import { useForm, ValidationError } from "@formspree/react";
 const ContactForm = () => {
   const [msg, setMsg] = useState();
+  const [state, handleSubmit] = useForm("myyrneld");
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+  }
   const form = useRef();
   const ref = useRef();
   let successText = (
@@ -28,23 +32,23 @@ const ContactForm = () => {
   );
   const isInView = useInView(ref, { once: true });
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await emailjs.sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-        form.current,
-        process.env.REACT_APP_EMAILJS_PUBLIC_ID
-      );
-      setMsg(successText);
-      form.current.reset();
-    } catch (error) {
-      console.error(error.text);
-      form.current.reset();
-      setMsg(errorText);
-    }
-  };
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     await emailjs.sendForm(
+  //       process.env.REACT_APP_EMAILJS_SERVICE_ID,
+  //       process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+  //       form.current,
+  //       process.env.REACT_APP_EMAILJS_PUBLIC_ID
+  //     );
+  //     setMsg(successText);
+  //     form.current.reset();
+  //   } catch (error) {
+  //     console.error(error.text);
+  //     form.current.reset();
+  //     setMsg(errorText);
+  //   }
+  // };
 
   const variants = {
     hidden: { opacity: 0, y: 20 },
@@ -83,8 +87,8 @@ const ContactForm = () => {
               animate={isInView ? "visible" : "hidden"}
               variants={variants}
             >
-              <form ref={form} onSubmit={handleSubmit}>
-                <div className="mb-6">
+              <form onSubmit={handleSubmit}>
+                {/* <div className="mb-6">
                   <input
                     type="text"
                     required
@@ -93,30 +97,45 @@ const ContactForm = () => {
                     autoComplete="name"
                     className="w-full rounded-lg py-3 px-[14px] text-body-color text-base border outline-none focus-visible:shadow-none focus:border-primary"
                   />
-                </div>
+                </div> */}
                 <div className="mb-6">
                   <input
                     type="email"
                     required
                     name="email"
                     autoComplete="email"
+                    id="email"
                     placeholder="Your Email"
                     className="w-full rounded-lg py-3 px-[14px] text-body-color text-base border outline-none focus-visible:shadow-none focus:border-primary"
+                  />
+                  <ValidationError
+                    prefix="Email"
+                    field="email"
+                    errors={state.errors}
                   />
                 </div>
                 <div className="mb-6">
                   <textarea
-                    rows={6}
+                    id="message"
                     name="message"
+                    rows={6}
                     placeholder="Your Message"
                     className="w-full rounded-lg py-3 px-[14px] text-body-color text-base border resize-none outline-none focus-visible:shadow-none focus:border-primary"
+                  />
+                  <ValidationError
+                    prefix="Message"
+                    field="message"
+                    errors={state.errors}
                   />
                 </div>
                 <div className="w-full flex justify-center items-center text-3xl">
                   <Button
-                    btnText="Submit"
+                    btnText="submit"
                     btnIcon={<BiMailSend className="text-2xl font-semibold" />}
                   />
+                  {/* <button  type="submit" disabled={state.submitting}>
+                    Submit
+                  </button> */}
                 </div>
               </form>
               {msg && (
