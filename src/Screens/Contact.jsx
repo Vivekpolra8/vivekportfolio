@@ -21,10 +21,11 @@ const Contact = () => {
           <MdEmail className="h-6 w-6 text-orange-500" />
         </div>
         <a
-          href="mailto:vivekpatel2611@gmail.com"
+          href="mailto:vivekkpateldeveloepr@gmail.com"
           className="text-black text-xl dark:text-white"
         >
-          vivekpatel2611@gmail.com
+          <span className="text-orange-500">vivekkpateldeveloepr</span>
+          @gmail.com
         </a>
       </div>
       &nbsp;
