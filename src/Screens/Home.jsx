@@ -4,7 +4,7 @@ import LottieAnimationCard from "../Components/LottieAnimationCard";
 import { HeroAnimation } from "../Assets/AssetsList";
 import { HiOutlineDownload } from "react-icons/hi";
 import { useRef } from "react";
-import VivekImg from "./../Assets/profile-pic (4).png"
+import VivekImg from "./../Assets/profile-pic (7).png"
 
 const Hero = () => {
   const textVariants = {
