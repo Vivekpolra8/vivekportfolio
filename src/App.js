@@ -9,6 +9,7 @@ import Skills from "./Screens/Skills";
 import AnimatedCursor from './Hooks/AnimatedCursor';
 import { useEffect, useState } from 'react';
 import Loader from './Components/Loader';
+import Testimonial from './Screens/Testimonial';
 
 function App() {
   const [load, updateLoad] = useState(true);
@@ -50,6 +51,7 @@ function App() {
         <Home />
         <Project />
         <Skills />
+        {/* <Testimonial/> */}
         <About />
         <Contact />
         <Footer />

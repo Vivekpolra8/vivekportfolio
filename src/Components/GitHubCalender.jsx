@@ -53,7 +53,7 @@ const GitHubCalender = () => {
         variants={containerVariants}
       >
         <motion.div variants={githubVariants}>
-          {/* <GitHubCalendar
+          <GitHubCalendar
             username="Saurabh-8585"
             blockSize={15}
             fontSize={10}
@@ -62,8 +62,7 @@ const GitHubCalender = () => {
               light: ["#ebedf0", "#c6e48b", "#7bc96f", "#239a3b", "#196127"],
               dark:["#ebedf0", "#c6e48b", "#7bc96f", "#239a3b", "#196127"],
             }}
-          /> */}
-          Cooming Soon
+          />
         </motion.div>
       </motion.div>
     </section>

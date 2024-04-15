@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-const SkillsCard = ({ imgSrc, index }) => {
+const SkillsCard = ({ imgSrc, index, name }) => {
   const variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -39,11 +39,14 @@ const SkillsCard = ({ imgSrc, index }) => {
         <motion.img
           src={imgSrc}
           alt="skills"
-          className="w-10/12 h-10/12 "
+          className="w-10/12 h-10/12"
           initial={{ scale: 1 }}
           whileHover={{ scale: 1.05 }}
         />
       </picture>
+        <p className="text-gray-700 dark:text-white text-xl">
+          {name}
+        </p>
     </motion.div>
   );
 };
