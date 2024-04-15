@@ -24,7 +24,7 @@ const Contact = () => {
           href="mailto:vivekkpateldeveloepr@gmail.com"
           className="text-black text-xl dark:text-white"
         >
-          <span className="text-orange-500">vivekkpateldeveloepr</span>
+          <span className="text-orange-500">vivekkpateldeveloper</span>
           @gmail.com
         </a>
       </div>
