@@ -44,7 +44,7 @@ const SkillsCard = ({ imgSrc, index, name }) => {
           whileHover={{ scale: 1.05 }}
         />
       </picture>
-        <p className="text-gray-700 dark:text-white text-xl">
+        <p className="text-gray-700 dark:text-black text-xl">
           {name}
         </p>
     </motion.div>
