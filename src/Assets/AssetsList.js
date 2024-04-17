@@ -6,6 +6,7 @@ import snapiaLogo from "../Assets/Project-Images/Building hashtag-amico.svg";
 import weatherAppLogo from "../Assets/Project-Images/Weather-amico.svg";
 import imdbLogo from "../Assets/Project-Images/Home cinema-amico.svg";
 import loader from "../Assets/loader.svg";
+import InvoiceGenerator from "../Assets/Project-Images/invoice.png";
 
 // Animations
 import aboutAnimation from "./Animations/AboutAnimation.json";
@@ -66,6 +67,7 @@ export const SnapiaLogo = snapiaLogo;
 export const WeatherAppLogo = weatherAppLogo;
 export const IMDBLogo = imdbLogo;
 export const Loader = loader;
+export const InvoiceGeneratorImg = InvoiceGenerator;
 
 // All Animations
 

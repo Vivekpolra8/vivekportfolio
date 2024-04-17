@@ -1,4 +1,4 @@
-import {  useState } from "react";
+import { useState } from "react";
 import { ProjectList } from "../Utils/ProjectDetails";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "../Components/Button";
@@ -7,7 +7,6 @@ import { TbWorldWww } from "react-icons/tb";
 
 const Modal = ({ onClose, projectKey }) => {
   const [isOpen, setIsOpen] = useState(true);
-
 
   const [singleProject] = ProjectList.filter((data) => data.key === projectKey);
   const { codeLink, demoLink, info, name, skills, youtube_url } = singleProject;
@@ -74,20 +73,24 @@ const Modal = ({ onClose, projectKey }) => {
               </div>
             )}
             <div className="mt-4 flex justify-around items-center">
-              <Button
-                btnText="View Code"
-                btnIcon={<AiOutlineGithub />}
-                handleOnClick={() =>
-                  window.open(codeLink, "_blank", "noopener noreferrer")
-                }
-              />
-              <Button
-                btnText="View Demo"
-                btnIcon={<TbWorldWww />}
-                handleOnClick={() =>
-                  window.open(demoLink, "_blank", "noopener noreferrer")
-                }
-              />
+              {codeLink?.length > 0 && (
+                <Button
+                  btnText="View Code"
+                  btnIcon={<AiOutlineGithub />}
+                  handleOnClick={() =>
+                    window.open(codeLink, "_blank", "noopener noreferrer")
+                  }
+                />
+              )}
+              {demoLink?.length > 0 && (
+                <Button
+                  btnText="View Demo"
+                  btnIcon={<TbWorldWww />}
+                  handleOnClick={() =>
+                    window.open(demoLink, "_blank", "noopener noreferrer")
+                  }
+                />
+              )}
             </div>
             <div className="modal-close absolute top-2 right-2">
               <motion.button

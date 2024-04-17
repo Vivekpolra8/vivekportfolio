@@ -34,7 +34,6 @@ const Project = () => {
     },
   };
 
-
   return (
     <motion.div
       className="flex justify-center items-center flex-col p-2 mt-8 mx-auto"
@@ -66,15 +65,16 @@ const Project = () => {
           ))}
         </div>
       </motion.div>
-      &nbsp;&nbsp;&nbsp;&nbsp;
-      <h1 className="text-orange-500 font-bebas-neue text-2xl dark:text-white pb-6 animate-blink">Loading ...</h1>
-      {/* <div
+      {/* &nbsp;&nbsp;&nbsp;&nbsp;
+        <h1 className="text-orange-500 font-bebas-neue text-2xl dark:text-white pb-6 animate-blink">Loading ...</h1> */}
+      <div
         className={`${
           projects.length > 2
             ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3"
             : "flex justify-center items-center"
         }
         mx-auto gap-4 mt-10`}
+        // className="mx-auto gap-4 mt-10"
       >
         {projects?.map((project, index) => (
           <Cards
@@ -87,7 +87,7 @@ const Project = () => {
             clientDemoLink={project.clientDemoLink}
           />
         ))}
-      </div> */}
+      </div>
     </motion.div>
   );
 };

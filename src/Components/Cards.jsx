@@ -45,18 +45,18 @@ const Cards = ({ title, imgSrc, index, clientDemoLink, projectKey }) => {
     <>
       <motion.div
         ref={ref}
-        className="flex justify-center items-center flex-col border border-gray-300 dark:border-gray-500 rounded-3xl p-20 m-10 gap-5 hover:shadow-md"
+        className="flex justify-center items-center flex-col border border-gray-300 dark:border-gray-500 rounded-3xl p-20 m-10 gap-5 hover:shadow-md h-full"
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         variants={variants}
         whileHover={hoverVariants}
         onClick={handleShowProject}
       >
-        <picture className="flex justify-center items-center">
+        <picture className="flex justify-center items-center ">
           <motion.img
             src={imgSrc}
             alt={title}
-            className="w-full h-full object-cover"
+            className="w-full"
             initial={{ scale: 1 }}
             whileHover={{ scale: 1.05 }}
           />
