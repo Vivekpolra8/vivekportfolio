@@ -80,14 +80,14 @@ const Hero = () => {
             className="relative flex lg:justify-end justify-center items-center my-2  md:mt-0 pb-4"
             variants={textVariants}
           >
-            <LottieAnimationCard AnimationSrc={HeroAnimation} />
-            {/* <motion.img
+            {/* <LottieAnimationCard AnimationSrc={HeroAnimation} /> */}
+            <motion.img
               src={VivekImg}
               alt={title}
               className="w-full h-full object-cover"
               initial={{ scale: 1 }}
               whileHover={{ scale: 1.05 }}
-            /> */}
+            />
           </motion.div>
         </div>
       </motion.div>
