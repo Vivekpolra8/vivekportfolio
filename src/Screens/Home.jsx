@@ -83,7 +83,7 @@ const Hero = () => {
             {/* <LottieAnimationCard AnimationSrc={HeroAnimation} /> */}
             <motion.img
               src={VivekImg}
-              alt={title}
+              // alt={title}
               className="w-full h-full object-cover"
               initial={{ scale: 1 }}
               whileHover={{ scale: 1.05 }}
