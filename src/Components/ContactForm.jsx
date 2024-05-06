@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import  { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import Button from "./Button";
 import { BiMailSend } from "react-icons/bi";
@@ -8,12 +8,12 @@ import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 import { useForm, ValidationError } from "@formspree/react";
 const ContactForm = () => {
   const [msg, setMsg] = useState();
-  // const [state, handleSubmit] = useForm("myyrneld");
-  const [result, setResult] = React.useState("");
+  const [state] = useForm("myyrneld");
+  
 
-  if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
-  }
+  // if (state.succeeded) {
+  //   return <p>Thanks for joining!</p>;
+  // }
   const form = useRef();
   const ref = useRef();
   let successText = (
@@ -112,7 +112,7 @@ const ContactForm = () => {
               animate={isInView ? "visible" : "hidden"}
               variants={variants}
             >
-              <form onSubmit={handleSubmit}>
+              <form  onClick={handleSubmit}>
                 <div className="mb-6">
                   <input
                     type="text"
