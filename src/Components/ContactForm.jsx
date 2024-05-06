@@ -8,7 +8,9 @@ import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 import { useForm, ValidationError } from "@formspree/react";
 const ContactForm = () => {
   const [msg, setMsg] = useState();
-  const [state, handleSubmit] = useForm("myyrneld");
+  // const [state, handleSubmit] = useForm("myyrneld");
+  const [result, setResult] = React.useState("");
+
   if (state.succeeded) {
     return <p>Thanks for joining!</p>;
   }
@@ -50,6 +52,29 @@ const ContactForm = () => {
   //   }
   // };
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "18689a55-664d-474b-8b25-7660430ec1ba");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+
   const variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -88,7 +113,7 @@ const ContactForm = () => {
               variants={variants}
             >
               <form onSubmit={handleSubmit}>
-                {/* <div className="mb-6">
+                <div className="mb-6">
                   <input
                     type="text"
                     required
@@ -97,7 +122,7 @@ const ContactForm = () => {
                     autoComplete="name"
                     className="w-full rounded-lg py-3 px-[14px] text-body-color text-base border outline-none focus-visible:shadow-none focus:border-primary"
                   />
-                </div> */}
+                </div>
                 <div className="mb-6">
                   <input
                     type="email"
@@ -144,7 +169,7 @@ const ContactForm = () => {
                   animate={{ opacity: 1 }}
                   className="w-full flex justify-center items-center mt-10 gap-5"
                 >
-                  {msg}
+                  <span>{result}</span>
                 </motion.div>
               )}
               <Circles />
