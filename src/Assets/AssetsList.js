@@ -11,7 +11,7 @@ import InvoiceGenerator from "../Assets/Project-Images/invoice.png";
 // Animations
 import aboutAnimation from "./Animations/AboutAnimation.json";
 import contactAnimation from "./Animations/ContactAnimation.json";
-import heroAnimation from "./Animations/HeroAnimation.json";
+import heroAnimation from "./Animations/landingpage.json";
 import projectAnimation from "./Animations/ProjectAnimation.json";
 import skillsAnimation from "./Animations/SkillsAnimation.json";
 import { Link } from "react-scroll";
