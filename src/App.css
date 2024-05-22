@@ -24,7 +24,7 @@ body {
 
 
 .active {
-    color: #FB923C;
+    color: #0077b6;
 }
 
 .r {
@@ -36,7 +36,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #FB923C;
+    background-color: #0077b6;
     border-radius: 4px;
 }
 
@@ -46,7 +46,7 @@ body {
 }
 
 ::-moz-scrollbar-thumb {
-    background-color: #FB923C;
+    background-color: #0077b6;
     border-radius: 4px;
 }
 
@@ -63,7 +63,7 @@ body {
 }
 
 .vertical-timeline--animate .vertical-timeline-element-content.bounce-in {
-    @apply bg-[#fc7b54] text-[white] rounded-[10px];
+    @apply bg-[#0077b6] text-[white] rounded-[10px];
 }
 
 .vertical-timeline-element-date {

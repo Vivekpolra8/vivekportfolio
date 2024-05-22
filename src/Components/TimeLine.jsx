@@ -4,13 +4,13 @@ import timelineItems from "../Utils/TimeLineData"
 
 const TimeLine = () => {
   return (
-    <VerticalTimeline lineColor="#f06529" style={{ backgroundColor: '#f0f0f0' }} >
+    <VerticalTimeline lineColor="#0077b6" style={{ backgroundColor: '#0077b6' }} >
       {timelineItems.map((item, index) => (
         <VerticalTimelineElement
           key={index}
           className={`vertical-timeline-element--${item.position} `}
           date={item.date}
-          iconStyle={{ background: '#fc7b54', color: '#fff' }}
+          iconStyle={{ background: '#0077b6', color: '#fff' }}
           icon={item.icon}
 
         >

@@ -7,7 +7,7 @@ module.exports = {
         lightText: "#FAFAFA",
         darkBg: "#18181B",
         mainTheme: '#EA580C',
-        fadeMainTheme: '#FB923C'
+        fadeMainTheme: '#0077b6'
 
       },
       backgroundColor: {

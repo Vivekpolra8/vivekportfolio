@@ -18,25 +18,25 @@ const Contact = () => {
       </div>
       <div className="flex items-center space-x-4">
         <div className="flex-shrink-0">
-          <MdEmail className="h-6 w-6 text-orange-500" />
+          <MdEmail className="h-6 w-6" style={{ color: "#0077b6" }} />
         </div>
         <a
           href="mailto:vivekkpateldeveloepr@gmail.com"
           className="text-black text-xl dark:text-white"
         >
-          <span className="text-orange-500">vivekkpateldeveloper</span>
+          <span style={{ color: "#0077b6" }}>vivekkpateldeveloper</span>
           @gmail.com
         </a>
       </div>
       &nbsp;
       <div className="flex items-center space-x-4">
         <div className="flex-shrink-0">
-          <FaSquarePhone className="h-6 w-6 text-orange-500" />
+          <FaSquarePhone className="h-6 w-6" style={{ color: "#0077b6" }} />
         </div>
         {/* <p className="text-black text-xl dark:text-white">+91 8000 96 63 96</p> */}
         <p className="text-black text-xl dark:text-white">
-          +91 8000 <span class="text-orange-500">96</span> 63
-          <span class="text-orange-500"> 96</span>
+          +91 8000 <span style={{ color: "#0077b6" }}>96</span> 63
+          <span style={{ color: "#0077b6" }}> 96</span>
         </p>
       </div>
     </section>

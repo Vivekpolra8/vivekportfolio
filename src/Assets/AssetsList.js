@@ -41,17 +41,17 @@ export const MainLogo = (
     onClick={() => window.scroll(0, 0)}
     className="nav-logo font-black leading-none text-gray-800 font-bebas-neue   dark:text-lightText flex items-center ml-4 cursor-pointer  no-underline text-4xl "
   >
-    <span className="r font-bebas-neue text-mainTheme text-4xl font-bold ">
+    <span className="r font-bebas-neue text-mainTheme text-4xl font-bold "  style={{ color: "#0077b6" }}>
       &lt;
     </span>
-    <span className="r font-bebas-neue text-mainTheme text-4xl font-bold ">
+    <span className="r font-bebas-neue text-mainTheme text-4xl font-bold " style={{ color: "#0077b6" }}>
       <IoHammerOutline size={32} />
     </span>
-    <span className="r font-bebas-neue text-mainTheme text-4xl font-bold ">
+    <span className="r font-bebas-neue text-mainTheme text-4xl font-bold "  style={{ color: "#0077b6" }}>
       /&gt;
     </span>
     Vi
-    <span className="r font-bebas-neue text-mainTheme text-6xl font-bold ">
+    <span className="r font-bebas-neue text-mainTheme text-6xl font-bold "  style={{ color: "#0077b6" }}>
       वे
     </span>
     k

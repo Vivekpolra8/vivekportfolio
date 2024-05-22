@@ -20,8 +20,8 @@ const Switcher = () => {
                 checked={darkSide}
                 onChange={toggleDarkMode}
                 className="ml-2 "
-                moonColor="#EA580C"
-                sunColor="#EA580C"
+                moonColor="#FFFFFF"
+                sunColor="#FFDF22"
                 size={40}
             />
         </>
