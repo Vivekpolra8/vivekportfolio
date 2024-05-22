@@ -13,7 +13,7 @@ const ContactForm = () => {
   let successText = (
     <>
       <h1 className="text-center font-semibold text-lg md:text-xl">
-        Messaged sent successfully{" "}
+        My team will get back to you. {" "}
       </h1>
       <FaCheckCircle className="text-fadeMainTheme text-xl" />
     </>
@@ -35,9 +35,9 @@ const ContactForm = () => {
         'service_jun1999',
         'template_ehoqwee',
         form.current,
-        
-           'uaXOz_8rOgQjUFuld'
-       
+
+        'uaXOz_8rOgQjUFuld'
+
 
       );
       setMsg(successText);
