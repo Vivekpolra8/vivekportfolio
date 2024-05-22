@@ -1,19 +1,13 @@
-import  { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import Button from "./Button";
 import { BiMailSend } from "react-icons/bi";
 import Circles from "./Circles";
 import emailjs from "@emailjs/browser";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
-import { useForm, ValidationError } from "@formspree/react";
+
 const ContactForm = () => {
   const [msg, setMsg] = useState();
-  const [state] = useForm("myyrneld");
-  
-
-  // if (state.succeeded) {
-  //   return <p>Thanks for joining!</p>;
-  // }
   const form = useRef();
   const ref = useRef();
   let successText = (
@@ -34,44 +28,24 @@ const ContactForm = () => {
   );
   const isInView = useInView(ref, { once: true });
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     await emailjs.sendForm(
-  //       process.env.REACT_APP_EMAILJS_SERVICE_ID,
-  //       process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-  //       form.current,
-  //       process.env.REACT_APP_EMAILJS_PUBLIC_ID
-  //     );
-  //     setMsg(successText);
-  //     form.current.reset();
-  //   } catch (error) {
-  //     console.error(error.text);
-  //     form.current.reset();
-  //     setMsg(errorText);
-  //   }
-  // };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await emailjs.sendForm(
+        'service_jun1999',
+        'template_ehoqwee',
+        form.current,
+        
+           'uaXOz_8rOgQjUFuld'
+       
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    setResult("Sending....");
-    const formData = new FormData(event.target);
-
-    formData.append("access_key", "18689a55-664d-474b-8b25-7660430ec1ba");
-
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
-
-    const data = await response.json();
-
-    if (data.success) {
-      setResult("Form Submitted Successfully");
-      event.target.reset();
-    } else {
-      console.log("Error", data);
-      setResult(data.message);
+      );
+      setMsg(successText);
+      form.current.reset();
+    } catch (error) {
+      console.error(error.text);
+      form.current.reset();
+      setMsg(errorText);
     }
   };
 
@@ -112,7 +86,7 @@ const ContactForm = () => {
               animate={isInView ? "visible" : "hidden"}
               variants={variants}
             >
-              <form  onClick={handleSubmit}>
+              <form ref={form} onSubmit={handleSubmit}>
                 <div className="mb-6">
                   <input
                     type="text"
@@ -129,38 +103,23 @@ const ContactForm = () => {
                     required
                     name="email"
                     autoComplete="email"
-                    id="email"
                     placeholder="Your Email"
                     className="w-full rounded-lg py-3 px-[14px] text-body-color text-base border outline-none focus-visible:shadow-none focus:border-primary"
-                  />
-                  <ValidationError
-                    prefix="Email"
-                    field="email"
-                    errors={state.errors}
                   />
                 </div>
                 <div className="mb-6">
                   <textarea
-                    id="message"
-                    name="message"
                     rows={6}
+                    name="message"
                     placeholder="Your Message"
                     className="w-full rounded-lg py-3 px-[14px] text-body-color text-base border resize-none outline-none focus-visible:shadow-none focus:border-primary"
-                  />
-                  <ValidationError
-                    prefix="Message"
-                    field="message"
-                    errors={state.errors}
                   />
                 </div>
                 <div className="w-full flex justify-center items-center text-3xl">
                   <Button
-                    btnText="submit"
+                    btnText="Submit"
                     btnIcon={<BiMailSend className="text-2xl font-semibold" />}
                   />
-                  {/* <button  type="submit" disabled={state.submitting}>
-                    Submit
-                  </button> */}
                 </div>
               </form>
               {msg && (
@@ -169,7 +128,7 @@ const ContactForm = () => {
                   animate={{ opacity: 1 }}
                   className="w-full flex justify-center items-center mt-10 gap-5"
                 >
-                  <span>{result}</span>
+                  {msg}
                 </motion.div>
               )}
               <Circles />
