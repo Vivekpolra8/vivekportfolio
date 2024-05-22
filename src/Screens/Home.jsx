@@ -57,7 +57,7 @@ const Hero = () => {
             </p>
             <p className="text-gray-700 dark:text-white text-xl md:px-3 mt-2">
               <span className="text-fadeMainTheme"> Hello!, </span>I am a
-              skilled React.js Developer with expertise in crafting dynamic and
+              skilled Full Stack Developer (React.js & Node.js) with expertise in crafting dynamic and
               responsive web applications. I am currently working on freelance
               projects, and I enjoy creating elegant solutions for complex
               frontend challenges, ensuring that the React applications I build
@@ -72,7 +72,7 @@ const Hero = () => {
                 btnText="Download CV"
                 btnIcon={<HiOutlineDownload className="text-2xl" />}
                 handleOnClick={downLoadCV}
-                // handleOnClick="window.location.href='https://drive.google.com/file/d/1MKX5s-JY915dpmAhAqoOx3U7BKGLlWU0/view'"
+              // handleOnClick="window.location.href='https://drive.google.com/file/d/1MKX5s-JY915dpmAhAqoOx3U7BKGLlWU0/view'"
               />
             </motion.div>
           </motion.div>
